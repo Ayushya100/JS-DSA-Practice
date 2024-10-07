@@ -12,7 +12,7 @@ class Queue {
     }
 
     peek() {
-        return this.isEmpty() ? 'Empty Queue' : this.queue[this.queue.length - 1];
+        return this.isEmpty() ? 'Empty Queue' : this.queue[0];
     }
 
     isEmpty() {
