@@ -53,10 +53,12 @@ DoublyLinkedList.prototype.insertAfterNode = function(data, key) {
 
     if (keyNode.next) {
         keyNode.next.prev = newNode;
-    } else {
-        this.tail = newNode;
     }
     keyNode.next = newNode;
+
+    if (!keyNode.next) {
+        this.tail = newNode;
+    }
 }
 
 DoublyLinkedList.prototype.deleteAtHead = function() {
@@ -106,6 +108,7 @@ DoublyLinkedList.prototype.deleteByKey = function(key) {
                 currentNode.prev.next = currentNode.next;
                 return;
             }
+            currentNode = currentNode.next;
         }
     }
 }
@@ -203,7 +206,7 @@ doublyLinkedList.deleteAtHead();
 console.log(doublyLinkedList.printList());
 doublyLinkedList.deleteAtTail();
 console.log(doublyLinkedList.printList());
-doublyLinkedList.deleteByKey(5);
+doublyLinkedList.deleteByKey(4);
 console.log(doublyLinkedList.printList());
 doublyLinkedList.deleteByKey(6);
 console.log(doublyLinkedList.printList());
