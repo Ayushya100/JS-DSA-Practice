@@ -9,3 +9,8 @@ accountCity = 'Prayagraj';
 
 console.log(accountId);
 console.table([accountId, accountEmail, accountPassword, accountCity])
+
+/*
+Prefer not to use var keyword for declaring variables
+because of the issue in block scope and functional scope.
+*/
