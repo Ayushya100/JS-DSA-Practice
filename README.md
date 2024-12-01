@@ -74,3 +74,4 @@ Practice Repo for JS and DSA
 - Selection Sort
 ## LeetCode Notes
 - 01_Two_Sum - Using memorization - Arrays, HashMap
+- 02_Remove_Element - Using two pointers technique - Arrays, Two Pointers
