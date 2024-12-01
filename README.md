@@ -72,3 +72,5 @@ Practice Repo for JS and DSA
 - Merge Sort
 - Quick Sort
 - Selection Sort
+## LeetCode Notes
+- 01_Two_Sum - Using memorization - Arrays, HashMap
