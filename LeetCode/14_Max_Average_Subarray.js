@@ -20,7 +20,7 @@ const findMaxAverage = function(nums, k) {
     let maxSum = sum;
 
     for (let i = k; i < nums.length; i++) {
-        sum = sum - nums[i - k] + nums[k];
+        sum = sum - nums[i - k] + nums[i]; 
         maxSum = Math.max(sum, maxSum);
     }
 
