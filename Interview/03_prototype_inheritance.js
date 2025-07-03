@@ -69,3 +69,19 @@ engineer3.info();
 // Interview Question - 5 - getPrototypeOf
 const prototypeList = Object.getPrototypeOf(engineer3);
 console.log(prototypeList);
+
+
+// Prototype Shadowing
+const person1 = {
+    name: 'ABC',
+    __proto__: {
+        name: 'XYZ',
+        __proto__: {
+            type: 'type new'
+        }
+    }
+};
+
+console.log(person1);
+console.log(person1.name);
+console.log(person1.type);
