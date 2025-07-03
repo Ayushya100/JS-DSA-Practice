@@ -6,14 +6,14 @@ function negativeIndex(arr) {
         get(target, prop) {
             const index = Number(prop);
             if (index < 0) {
-                return target[target.length - index];
+                return target[target.length + index];
             }
             return target[index];
         },
         set(target, prop, value) {
             const index = Number(prop);
             if (index < 0) {
-                target[target.length - index] = value;
+                target[target.length + index] = value;
             } else {
                 target[index] = value;
             }
@@ -22,3 +22,13 @@ function negativeIndex(arr) {
     });
 };
 
+const proxyArr = negativeIndex(arr);
+
+console.log(arr);
+console.log(proxyArr);
+console.log(proxyArr[-1]);
+console.log(proxyArr[-2]);
+
+proxyArr[-3] = 33;
+console.log(arr);
+console.log(proxyArr);
