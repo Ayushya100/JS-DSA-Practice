@@ -1,5 +1,7 @@
 import fs from 'fs';
 
+// Promisification or Custom Promises
+// Promisification is a process where we convert the legacy codes into the promisified version and return the promise.
 function readFileWithPromise(filepath, encoding) {
     return new Promise((resolve, reject) => {
         fs.readFile(filepath, encoding, (err, content) => {
@@ -20,8 +22,8 @@ function writeFileWithPromise(filepath, content) {
             } else {
                 resolve();
             }
-        })
-    })
+        });
+    });
 }
 
 function unlinkFileWithPromise(filepath) {
@@ -32,8 +34,8 @@ function unlinkFileWithPromise(filepath) {
             } else {
                 resolve();
             }
-        })
-    })
+        });
+    });
 }
 
 readFileWithPromise('./hello.txt', 'utf-8')
