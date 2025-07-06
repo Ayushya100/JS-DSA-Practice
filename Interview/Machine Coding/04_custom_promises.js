@@ -43,3 +43,18 @@ readFileWithPromise('./hello.txt', 'utf-8')
     .then(() => unlinkFileWithPromise('./hello.txt'))
     .catch((err) => console.log(err))
     .finally(() => console.log('Operation completed'));
+
+// Same implementation as above but using async-await
+async function doTasks() {
+    try {
+        const fileContent = await readFileWithPromise('./hello.txt', 'utf-8');
+        await writeFileWithPromise('./backup.txt', fileContent);
+        await unlinkFileWithPromise('./hello.txt');
+    } catch(err) {
+        console.log(`Error: ${err}`);
+    } finally {
+        console.log('Operation completed');
+    }
+}
+
+doTasks().then(() => console.log('Task completed'));
