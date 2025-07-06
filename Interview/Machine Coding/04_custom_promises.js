@@ -38,6 +38,12 @@ function unlinkFileWithPromise(filepath) {
     });
 }
 
+function wait (seconds) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {}, seconds * 1000);
+    })
+}
+
 readFileWithPromise('./hello.txt', 'utf-8')
     .then(content => writeFileWithPromise('./backup.txt', content))
     .then(() => unlinkFileWithPromise('./hello.txt'))
@@ -49,6 +55,7 @@ async function doTasks() {
     try {
         const fileContent = await readFileWithPromise('./hello.txt', 'utf-8');
         await writeFileWithPromise('./backup.txt', fileContent);
+        await wait(10);
         await unlinkFileWithPromise('./hello.txt');
     } catch(err) {
         console.log(`Error: ${err}`);
