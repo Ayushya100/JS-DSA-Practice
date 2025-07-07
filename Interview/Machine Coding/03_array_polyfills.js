@@ -68,3 +68,30 @@ const myFilterRes = arr.myFilter((value, index) => value > 5);
 
 console.log(filterRes);
 console.log(myFilterRes);
+
+
+// Write a polyfill for Array.reduce function
+// .reduce signature - 
+// if (!Array.prototype.reduce) {
+if (!Array.prototype.myReduce) {
+    Array.prototype.myReduce = function(userFn, initialValue = undefined) {
+        let accumulator = this[0];
+        let startIndex = 1;
+
+        if (initialValue) {
+            accumulator = initialValue;
+            startIndex = 0;
+        }
+
+        for (let i = startIndex; i < this.length; i++) {
+            accumulator = userFn(accumulator, this[i]);
+        }
+        return accumulator;
+    }
+}
+
+const reduceRes = arr.reduce((accum, currentValue) => accum + currentValue);
+const myReduceRes = arr.myReduce((accum, currentValue) => accum + currentValue);
+
+console.log(reduceRes);
+console.log(myReduceRes);
