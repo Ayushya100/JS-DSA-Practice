@@ -20,3 +20,26 @@ debounceFn();
 debounceFn();
 debounceFn();
 debounceFn();
+// Remove past request => keep a reference of it
+// Fire a new request
+// userRequest() => debouncesUserRequest()
+
+
+
+// Throttling
+const higherOrdFn1 = (fn, delay) => {
+    let timerId = null;
+
+    return (...args) => {
+        if (timerId === null) {
+            fn(...args);
+            timerId = setTimeout(() => {
+                timerId = null;
+            }, delay);
+        }
+    }
+}
+
+higherOrdFn1(greet('Ayushya Jaiswal'), 3000);
+higherOrdFn1(greet('Ayushya Jaiswal'), 3000);
+higherOrdFn1(greet('Ayushya Jaiswal'), 3000);
