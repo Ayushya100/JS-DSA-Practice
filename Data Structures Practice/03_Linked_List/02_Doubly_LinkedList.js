@@ -48,33 +48,40 @@ DoublyLinkedList.prototype.reverse = function() {
 
 // Usage Examples
 const doublyLinkedList = new DoublyLinkedList();
-
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
 doublyLinkedList.insertAtHead(3);
-console.log(doublyLinkedList.printList());
-doublyLinkedList.insertAtTail(4)
-console.log(doublyLinkedList.printList());
-doublyLinkedList.insertAtTail(6)
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
 doublyLinkedList.insertAtHead(2);
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
+doublyLinkedList.insertAtTail(4)
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
+doublyLinkedList.insertAtTail(6)
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
+doublyLinkedList.insertAtHead(1);
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
+
 doublyLinkedList.insertAfterNode(8, 7);
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
 doublyLinkedList.insertAfterNode(5, 4);
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
 doublyLinkedList.insertAfterNode(7, 6);
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
+
+console.log(`Search Key 4: ${doublyLinkedList.searchNode(4)}`);
+console.log(`Search Key 10: ${doublyLinkedList.searchNode(10)}`);
+console.log(`Search Key 7: ${doublyLinkedList.searchNode(7)}`);
 
 doublyLinkedList.reverse();
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
 
 doublyLinkedList.deleteAtHead();
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
 doublyLinkedList.deleteAtTail();
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
+
 doublyLinkedList.deleteByKey(4);
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
 doublyLinkedList.deleteByKey(6);
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
 doublyLinkedList.deleteByKey(3);
-console.log(doublyLinkedList.printList());
+console.log(`List Length: ${doublyLinkedList.length()} | ${doublyLinkedList.printList()}`);
