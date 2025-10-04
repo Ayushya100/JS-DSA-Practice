@@ -39,14 +39,17 @@ queue.enQueue(5);
 queue.enQueue(4);
 queue.enQueue(3);
 queue.enQueue(2);
-console.log(queue.printQueue());
-console.log(queue.peek());
+console.log(`Queue Elements: ${queue.printQueue()}`);
+console.log(`Top Element in Queue: ${queue.peek()}`);
 
-console.log(queue.deQueue());
-console.log(queue.peek());
-console.log(queue.deQueue());
-console.log(queue.peek());
+console.log(`Element removed from Queue: ${queue.deQueue()}`);
+console.log(`Top Element of Queue: ${queue.peek()}`);
+console.log(`Element removed from Queue: ${queue.deQueue()}`);
+console.log(`Top Element of Queue: ${queue.peek()}`);
 
-console.log(queue.size());
-console.log(queue.printQueue());
+console.log(`Queue Size: ${queue.size()}`);
+console.log(`Queue Elements: ${queue.printQueue()}`);
+
 queue.clear();
+console.log(`Queue Size: ${queue.size()}`);
+console.log(`Queue Elements: ${queue.printQueue()}`);
