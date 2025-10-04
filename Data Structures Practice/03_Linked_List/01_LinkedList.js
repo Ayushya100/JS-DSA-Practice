@@ -52,44 +52,47 @@ LinkedList.prototype.reverse = function() {
 
 // Usage Example
 const linkedList = new LinkedList();
-console.log(linkedList.printList());
-linkedList.insertAtBeginning(3);
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
+linkedList.insertAtEnd(3);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
 linkedList.insertAtBeginning(2);
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
+linkedList.insertAtBeginning(1);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
 
 linkedList.insertAtEnd(4);
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
 linkedList.insertAtEnd(6);
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
 
 linkedList.insertAfterNode(8, 7);
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
 linkedList.insertAfterNode(5, 4);
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
+linkedList.insertAfterNode(7, 6);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
+
+console.log(`Search Result for Element 6: ${linkedList.search(6)}`);
+console.log(`Search Result for Element 2: ${linkedList.search(2)}`);
 
 linkedList.reverse();
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Reversed Linked List: ${linkedList.printList()}`);
+
+console.log(`Search Result for Element 6: ${linkedList.search(6)}`);
+console.log(`Search Result for Element 2: ${linkedList.search(2)}`);
 
 linkedList.deleteAtBeginning();
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
-linkedList.deleteAtEnd();
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
-linkedList.deleteAtEnd();
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
 linkedList.deleteAtBeginning();
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
 linkedList.deleteAtEnd();
-console.log(linkedList.printList());
-console.log(`Length - ${linkedList.length()}`);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
+linkedList.deleteAtEnd();
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
+
+linkedList.deleteByKey(5);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
+linkedList.deleteByKey(8);
+console.log(`List Length: ${linkedList.length()} - Linked List: ${linkedList.printList()}`);
+
+console.log(`Search Result for Element 2: ${linkedList.search(2)}`);
